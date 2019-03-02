@@ -1,0 +1,42 @@
+var data = [
+    {
+        "Customer ID": "100",
+        "Customer Name": "Ramesh",
+        "Business Name": "Apple Fitness",
+        "Email ID": "ramesh@applefitness.com",
+        "Mobile Number": "9036116245",
+        "Business Location": "BEL Road, Sanjaynagar"
+    },
+    {
+        "Customer ID": "101",
+        "Customer Name": "Ahmed Khan",
+        "Business Name": "Ajfan",
+        "Email ID": "ahmed.khan@ajfan.com",
+        "Mobile Number": "8080812345",
+        "Business Location": "Indiranagar"
+    },
+    {
+        "Customer ID": "102",
+        "Customer Name": "Nandakumar",
+        "Business Name": "Drunken Monkey",
+        "Email ID": "nandakumar@drunkenmonkey.com",
+        "Mobile Number": "7676767676",
+        "Business Location": "Koramangala"
+    },
+    {
+        "Customer ID": "103",
+        "Customer Name": "Vinith",
+        "Business Name": "Sangria",
+        "Email ID": "vinith@sangria.in",
+        "Mobile Number": "9898989898",
+        "Business Location": "Malleshwaram"
+    },
+    {
+        "Customer ID": "104",
+        "Customer Name": "Jayakumar",
+        "Business Name": "Wow momos",
+        "Email ID": "jk@wowmomos.com",
+        "Mobile Number": "8888888888",
+        "Business Location": "Whitefield"
+    }
+]

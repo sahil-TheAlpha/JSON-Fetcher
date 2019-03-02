@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--Meta Tags -->
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 	<meta http-equiv="x-ua-compatible" content="ie=edge">
+ 	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" type="text/css" href="./CSS/bootstrap.min.css">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="./CSS/index.css">
+
+	<title>Fetching JSON Data</title>
+</head>
+<body>
+	<!-- Button -->
+	<button id="button" class="btn text-uppercase text-center btn-dark text-white btn-lg mb-4">Load data</button>
+	<!-- Button -->
+	
+	<!-- Start of Table -->
+	<table class="table table-bordered table-responsive-sm table-responsive-md table-striped table-hover tableNone" id="table">
+		<thead>
+			<tr>
+				<th class="text-center text-uppercase font-weight-bold">Customer ID</th>
+				<th class="text-center text-uppercase font-weight-bold">Customer Name</th>
+				<th class="text-center text-uppercase font-weight-bold">Business Name</th>
+				<th class="text-center text-uppercase font-weight-bold">Email ID</th>
+				<th class="text-center text-uppercase font-weight-bold">Mobile Number</th>
+				<th class="text-center text-uppercase font-weight-bold">Business Location</th>
+			</tr>
+		</thead>
+	</table>
+	<!-- End of Table -->
+
+	<!-- jQuery -->
+	<script type="text/javascript" src="./JS/jquery-3.3.1.min.js"></script>
+	<!-- Custom JS -->
+	<script type="text/javascript" src="./JS/Customers.json"></script>
+	<!-- Bootstrap JS -->
+	<script type="text/javascript" src="./JS/bootstrap.min.js"></script>
+	
+	<script type="text/javascript">
+		var button = document.getElementById('button'); //Accessing the Button
+		var jsonData = data; //Accessing the JSON data from the JSON file
+		var tableData = ''; //Initializing the variable
+
+		//Looping through the data
+		for(let i = 0; i < jsonData.length; i++){
+			var tableData = tableData + '<tr>' + 
+								'<td>' + jsonData[i]["Customer ID"] + '</td>' +
+							    '<td>' + jsonData[i]["Customer Name"] + '</td>' +
+								'<td>' + jsonData[i]["Business Name"] + '</td>' +
+								'<td>' + jsonData[i]["Email ID"] + '</td>' +	
+								'<td>' + jsonData[i]["Mobile Number"] + '</td>' +
+								'<td>' + jsonData[i]["Business Location"] + '</td>' +
+							  '</tr>';	
+		}	
+		var tableBody = document.createElement('tbody'); //Creating HTML Element
+
+		tableBody.innerHTML = tableData;//Storing the data
+		
+		document.getElementById('table').appendChild(tableBody); //Appending the new Element to the body
+
+		//Assigning the click listener
+		button.addEventListener('click', function(){
+			document.getElementById('table').classList.toggle('tableNone');
+		});
+	</script>
+</body>
+</html>
